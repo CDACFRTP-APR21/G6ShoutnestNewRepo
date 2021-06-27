@@ -1,0 +1,106 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+    integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous"> -->
+    <title>Document</title>
+    <!--  -->
+</head>
+<body>
+    <div class="container-fluid"  style="height: 95vh;">
+        <div class="row text-center mb-4 pb-6">
+            <div class="col-sm-9 col-md-6 col-lg-5 text-align: center " style="background-color: #edfdf4;;">
+                <br><br><br><br><br><br>
+              <b><h1 class="font-weight-bold" style="color:rgb(151, 8, 151); align-content: center;font-size:500%;">ShoutNest</h1></b>  
+                <h3 >We help you connect and share with the friends in your life and people across the world </h3>
+            </div>
+            <div class="col-sm-3 col-md-6 col-lg-7 rounded mb-4 pb-4"
+                style="background-color: #edfdf4;border: rounded 4px;; border-radius: 4px; float: right;  ">
+
+                <section class="Form   mx-6 pr-2 mb-2 pb-4">
+                    <div class="d-flex justify-content-center ">
+                        <div class="row no-gutters">
+
+                            <div class="class-md px-4 pt-4 mb-5 pb-2">
+                                <div class="card p-4 my-5 pb-3  bg-light rounded shadow  mb-5 bg-black color-white " style="border-radius: 4px; background-color:rgb(151, 29, 29);
+                                ">
+                                <form  id="form" >
+                                    <div class="form-row">
+                                        <div class="col">
+                                            <input type="input" id="name" placeholder="Username"  [(ngModel)]="user1.userName" name="userName"
+                                                class="form-control input-sm my-3 py-2 " required>
+
+                                        </div>
+                                    </div>
+                                    <div class="form-row">
+                                        <div class="col">
+                                            <input  type="password" id="password" placeholder="Password" [(ngModel)]="user1.password"
+                                            name="password"
+                                           
+                                                class="form-control input-sm my-3 py-2" required>
+
+                                        </div>
+                                    </div>
+                                    <div class="form-row">
+                                        <div class="col">
+                                            <input type="input" id="fname" placeholder="First Name"  [(ngModel)]="user1.firstName" name="fname"
+                                                class="form-control input-sm my-3 py-2 " required>
+
+                                        </div>
+                                    </div>
+                                    <div class="form-row">
+                                        <div class="col">
+                                            <input type="input" id="lname" placeholder="Last Name"  [(ngModel)]="user1.lastName" name="lname"
+                                                class="form-control input-sm my-3 py-2 " required>
+
+                                        </div>
+                                    </div>
+                                    <div class="form-row">
+                                        <div class="col">
+                                            <input type="email" id="email" placeholder="Email Id"  [(ngModel)]="user1.emailId" name="email"
+                                                class="form-control input-sm my-3 py-2 " required>
+
+                                        </div>
+                                    </div>
+                                    <div class="form-row">
+                                        <div class="col">
+                                            <input type="tel" id="mobile" placeholder="Mobile No"  [(ngModel)]="user1.MobileNo" name="mobile"
+                                                class="form-control input-sm my-3 py-2 " required>
+
+                                        </div>
+                                    </div>
+                                    <div class="form-row">
+                                        <div class="col">
+                                            <input type="date" id="dob" placeholder="Date Of Birth"  [(ngModel)]="user1.DateOfBirth" name="dob"
+                                                class="form-control input-sm my-3 py-2 " required>
+
+                                        </div>
+                                    </div>
+                                    <div class="form-row">
+                                        <div class="col text-center ">
+                                            <input type="submit" (click)="register()" class="btn1 my-3 py-2 btn-lg btn" style=" font-weight:bold;;background-color: rgb(28, 165, 28); color: white; min-width: 300px;" value="Sign Up">
+                                        </div>
+                                    </div>
+                                    <br>
+                                </form>
+
+                                    <div>
+                                        <p class=" px-4 pb-4">Account already exist ?<a href="">Log In</a></p>
+                                        
+                                    </div>
+                                
+                            </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </div>
+    </div>
+ </body>
+
+</html>

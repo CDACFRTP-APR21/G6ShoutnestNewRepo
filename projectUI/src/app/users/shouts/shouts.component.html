@@ -1,0 +1,83 @@
+<div>
+  <table>
+
+
+    <tr *ngFor="let dataitem of shoutList">
+      <!-- <td>{{dataitem.path}}</td> -->
+      <td>{{dataitem.caption}}</td>
+  </table>
+
+  <div *ngFor="let dataitem of shoutList">
+    <div class="card" style="width:100%; padding:3% ; ">
+
+      <div class='container2'>
+        <div class="left">
+          <img src='{{dataitem.userId__profilePic}} ' class='iconDetails'>
+        </div>
+        <div class="right">
+          <h6>{{dataitem.userId__userName}} uploaded a post</h6>
+        </div>
+
+      </div>
+      
+      <!-- <div *ngIf="dataitem.type='img'">
+        in divvvvvvvvvv
+      </div> -->
+
+      <img class="card-img-top" *ngIf="dataitem.type == 1"  src="{{dataitem.path}}" alt="Card image" height="450px">
+      <!-- <video src="{{dataitem.path}}"></video> -->
+      
+      
+      <video *ngIf="dataitem.type == 2"   controls>
+        <source src="{{dataitem.path}}" type="video/mp4">
+        <source src="{{dataitem.path}}" type="video/ogg">
+        Your browser does not support the video tag.
+      </video>
+    
+      <hr />
+      <div class="card-body">
+        <h4 class="card-title">{{dataitem.caption}}</h4>
+        <p class="card-text">{{dataitem.path}}/p><br/>
+        <!-- <a href="#" class="btn btn-primary">Report Shout</a> -->
+       <!-- Button trigger modal -->
+<button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+ Report
+</button>
+
+<!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <input type="text" placeholder="Reason" >
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        <button type="submit" class="btn btn-primary" (click)="onModalClick(dataitem.shoutId)">Save changes</button>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- 
+<script>
+  var myModal = document.getElementById('myModal')
+var myInput = document.getElementById('myInput')
+
+myModal.addEventListener('shown.bs.modal', function () {
+  myInput.focus()
+})
+</script> -->
+
+      </div>
+    </div>
+    <hr />
+   
+  </div>
+
+
+
+</div>
