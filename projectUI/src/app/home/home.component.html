@@ -1,0 +1,36 @@
+<nav class="navbar navbar-expand-lg navbar navbar-light" style="background-color: #a2cae7;">
+  <a class="navbar-brand" href="#">SN</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+    aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item active">
+        <a class="nav-link text-success" href="#"><b>Home</b></a>
+      </li>
+    </ul>
+  </div>
+
+  <a class="nav-link float-right text-success  " href="#"><b>Upload Post</b></a>
+  <a class="nav-link float-right text-success  " [routerLink] = "['/friends']"><b>Friends</b></a>
+  <a class="nav-link float-right text-success  " href="#"><b>Profile</b></a>
+  <button class="btn btn-danger float-right " type="button " (click)="logout()" >Log out</button>
+</nav>
+<div class="row">
+  <div class="col-sm-3 text-center">.<br />
+
+    <app-profile></app-profile>
+
+  </div>
+  <div class="col-sm-6 text-center" >Posts<br />
+    <app-shouts></app-shouts>
+  </div>
+
+  <div class="col-sm-3 text-center " >Suggestions<br />
+    <app-suggestions></app-suggestions>
+    
+
+  </div>
+</div>
