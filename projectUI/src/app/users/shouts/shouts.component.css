@@ -1,0 +1,26 @@
+.iconDetails {
+   
+    margin-right: 2%;
+   float:left; 
+   height:40px;
+   width:40px;
+   border-radius: 50px;
+   align-content:flex-start;
+   
+   } 
+   
+   .container2 {
+       width:100%;
+       height:auto;
+       padding:2%;
+       float:left;
+       text-align: left;
+       
+       
+   }
+   .right {
+       padding-top: 2%;
+       
+    
+    }
+  

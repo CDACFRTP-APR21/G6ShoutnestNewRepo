@@ -1,0 +1,129 @@
+
+  
+
+<div>
+  <!-- <table>
+
+    <tr *ngFor="let dataitem of shoutList">
+      <td>{{dataitem.path}}</td>
+      <td>{{dataitem.caption}}</td> -->
+  <!-- </table> --> 
+
+  <div class="card" style="width:100%; padding:3% ; ">
+
+    <div class='container2'>
+      <div class="left">
+        <img src='../../../assets/person.jpg' class='iconDetails'>
+      </div>
+      <div class="right">
+        <h6>Shubham uploaded a post</h6>
+      </div>
+
+    </div>
+
+    <img class="card-img-top" src="../../../assets/download.jfif" alt="Card image">
+    <hr />
+    <div class="card-body">
+      <h4 class="card-title">Shout Title</h4>
+      <p class="card-text">Shout Caption</p>
+      <!-- <a href="#" class="btn btn-primary" (click)="reports(dataitem.userId)">Report Shout</a> -->
+    </div>
+  </div>
+  <hr />
+  <!--
+  <div class="card" style="width:100%;padding:3%">
+    <div class='container2'>
+      <div class="left">
+        <img src='../../../assets/person.jpg'  class='iconDetails'>
+      </div>
+      <div class="right">      
+        <h6>Rahul uploaded a post</h6>       
+      </div>
+      
+    </div>
+    <img class="card-img-top" src="../../../assets/links for html css.PNG" alt="Card image">
+    <div class="card-body">
+      <h4 class="card-title">Shout Title</h4>
+      <p class="card-text">Shout Caption</p>
+      <a href="#" class="btn btn-primary">Report Shout</a>
+    </div>
+  </div>
+  <hr />
+  <div class="card" style="width:100%; padding:3% ;">
+    <div class='container2'>
+      <div class="left">
+        <img src='../../../assets/person.jpg'  class='iconDetails'>
+      </div>
+      <div class="right">      
+        <h6>Nidhi uploaded a post</h6>       
+      </div>
+      
+    </div>
+    <img class="card-img-top" src="../../../assets/person.jpg" alt="Card image">
+    <div class="card-body">
+      <h4 class="card-title">Shout Title</h4>
+      <p class="card-text">Shout Caption</p>
+      <a href="#" class="btn btn-primary">Report Shout</a>
+    </div>
+  </div> 
+-->
+  <div *ngFor="let dataitem of shoutList">
+    <div class="card" style="width:100%; padding:3% ; ">
+
+      <div class='container2'>
+        <div class="left">
+          <img src='../../../assets/person.jpg' class='iconDetails'>
+        </div>
+        <div class="right">
+          <h6>Shubham uploaded a post</h6>
+        </div>
+
+      </div>
+
+      <img class="card-img-top" src="../../../assets/download.jfif" alt="Card image">
+      <hr />
+      <div class="card-body">
+        <h4 class="card-title">{{dataitem.path}}</h4>
+        <p class="card-text">{{dataitem.caption}}</p><br/>
+        
+        <!-- <button class="btn btn-primary" (click)="reports(dataitem.shoutId)">Report Shout</button> -->
+
+
+<button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+  Report
+</button>
+
+<!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Report</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <form>
+      <div class="modal-body">
+        <input type="text" placeholder=" Reason" [(ngModel)]="reason" [ngModelOptions]="{standalone: true}"/>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        <button type="submit" class="btn btn-primary" (click)="reports(dataitem.shoutId)">Submit</button>
+      </div>
+    </form>
+    </div>
+  </div>
+</div>
+ <script>
+ var myModal = document.getElementById('myModal')
+var myInput = document.getElementById('myInput')
+
+myModal.addEventListener('shown.bs.modal', function () {
+  myInput.focus()
+})
+</script> 
+ 
+        </div>  
+        </div>
+        </div>
+        </div>
+        
