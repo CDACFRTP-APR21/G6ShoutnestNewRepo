@@ -1,0 +1,15 @@
+
+  
+
+  <ul *ngFor="let data of suggestionList;let j = index" class="list-group">
+    <li class="list-group-item ">
+        <ul *ngFor="let data1 of suggestionList[0];let i = index" class="list-group">
+            <li class="list-group-item ">
+                 {{ data1.userName}}
+                 
+                 <button id="{{data1.userId}}"type="button" class="btn btn-outline-primary btn-sm " (click)="sendRequest(data1.userId)"> Send Request</button>
+            </li>
+            
+          </ul>
+      </li>
+  </ul>

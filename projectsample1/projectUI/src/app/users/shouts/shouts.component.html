@@ -1,0 +1,91 @@
+<div>
+
+  <div class="card" style="width:100%; padding:3% ; ">
+
+    <div class='container2'>
+      <div class="left">
+        <img src='../../../assets/person.jpg ' class='iconDetails'>
+      </div>
+      <div class="right">
+        <h6>From ShoutNest Team</h6>
+      </div>
+
+    </div>
+
+    <img class="card-img-top" src="../../../assets/Welcome.jpg" alt="Card image" height="450px" width="100%">
+
+    <hr />
+    <div class="card-body">
+      <h4 class="card-title">Welcome to Shoutnest</h4>
+
+
+
+
+    </div>
+  </div>
+
+  <div *ngFor="let dataitem of shoutList">
+    <div class="card" style="width:100%; padding:3% ; ">
+
+      <div class='container2'>
+        <div class="left">
+          <img src='{{dataitem.userId__profilePic}} ' onerror="this.onerror=null; this.src='../../../assets/person.jpg'"
+            class='iconDetails'>
+        </div>
+        <div class="right">
+          <h6>{{dataitem.userId__userName}} uploaded a post</h6>
+        </div>
+
+      </div>
+
+
+      <img class="card-img-top" *ngIf="dataitem.type == 1" src="{{dataitem.path}}" alt="Card image" height="450px">
+     
+      <video *ngIf="dataitem.type == 2" controls>
+        <source src="{{dataitem.path}}" type="video/mp4">
+        <source src="{{dataitem.path}}" type="video/ogg">
+        Your browser does not support the video tag.
+      </video>
+
+      <hr />
+      <div class="card-body">
+        <h4 class="card-title">{{dataitem.caption}}</h4>
+
+
+        <!-- Button trigger modal -->
+        <button type="button" class="btn btn-outline-secondary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+          Report
+        </button>
+
+        <!-- Modal -->
+        <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Report</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+              </div>
+              <form>
+                <div class="modal-body">
+                  <input type="text" placeholder=" Reason" [(ngModel)]="reason" [ngModelOptions]="{standalone: true}" />
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                  <button type="submit" id="{{dataitem.shoutId}}" class="btn btn-primary" data-bs-dismiss="modal"
+                    (click)="reports(dataitem.shoutId)">Submit</button>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+
+
+      </div>
+    </div>
+    <hr />
+
+  </div>
+
+
+
+</div>
